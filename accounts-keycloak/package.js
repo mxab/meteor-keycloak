@@ -17,8 +17,8 @@ Package.onUse(function(api) {
     // Export Accounts (etc) to packages using this one.
     api.imply('accounts-base', ['client', 'server']);
     api.use('accounts-oauth', ['client', 'server']);
-    api.use('mxab:keycloak-oauth');
-    api.imply('mxab:keycloak-oauth');
+    api.use('mxab:keycloak-oauth@0.0.1');
+    api.imply('mxab:keycloak-oauth@0.0.1');
 
     api.addFiles('accounts-keycloak.js');
 });
