@@ -1,4 +1,7 @@
-import { Config, GrantManager } from "keycloak-auth-utils";
+import { Meteor } from 'meteor/meteor';
+import session from 'express-session';
+import Keycloak from "keycloak-connect";
+import { ServiceConfiguration } from 'meteor/service-configuration';
 
 MeteorKeycloak = {};
 /**
@@ -52,11 +55,13 @@ function getGrant(query) {
 
     const config = getKeycloakConfig();
 
-    const grantManager = new GrantManager(new Config(config));
+    const grantManager = new Keycloak(config, config).grantManager;
 
     const redirectUri = OAuth._redirectUri('keycloak', config);
 
     const code = query.code;
+
+    config.store = new session.MemoryStore();
 
     const result = Meteor.wrapAsync(function(grantManager, auth_redirect_uri, code, callback) {
         grantManager.obtainFromCode({ session: { auth_redirect_uri: auth_redirect_uri } }, code, null, null, callback);

@@ -1,9 +1,11 @@
 Npm.depends({
-  "keycloak-auth-utils": "3.2.0"
+  "keycloak-connect": "4.0.0",
+  'express-session': '1.15.6'
 });
+
 Package.describe({
   name: 'mxab:keycloak-oauth',
-  version: '0.0.1',
+  version: '0.0.2',
   // Brief, one-line summary of the package.
   summary: 'https://github.com/mxab/meteor-keycloak.git',
   // URL to the Git repository containing the source code for this package.

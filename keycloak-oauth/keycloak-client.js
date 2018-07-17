@@ -1,3 +1,6 @@
+import { Random } from 'meteor/random';
+import { ServiceConfiguration } from 'meteor/service-configuration';
+
 MeteorKeycloak = {};
 
 // Request MeteorKeycloak credentials for the user
@@ -28,7 +31,7 @@ MeteorKeycloak.requestCredential = function(options, credentialRequestCompleteCa
 
     const credentialToken = Random.secret();
 
-    const loginStyle = "redirect";
+    const loginStyle = config.loginStyle || "redirect";
 
 
     const realmUrl = `${authServerUrl}/realms/${realm}`;
