@@ -1,7 +1,9 @@
+import { Tracker } from 'meteor/tracker';
+
 const loader = new Promise((resolve, reject) => {
 
 
-    Meteor.autorun(function(c) {
+    Tracker.autorun(function(c) {
         if (Accounts.loginServicesConfigured()) {
             c.stop();
             start();

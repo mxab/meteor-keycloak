@@ -1,6 +1,6 @@
 Package.describe({
     name: 'mxab:keycloak-loader',
-    version: '0.0.1',
+    version: '0.0.2',
     // Brief, one-line summary of the package.
     summary: 'Loads the keycloak.js from the Keycloak Server and creates an instance',
     // URL to the Git repository containing the source code for this package.
