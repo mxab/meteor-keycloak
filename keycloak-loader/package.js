@@ -14,8 +14,8 @@ Package.onUse(function(api) {
     api.versionsFrom('1.5');
     api.use('ecmascript');
     api.use('service-configuration', ['client']);
-    api.use('mxab:keycloak-oauth@0.0.1', ['client'])
-    api.use('mxab:accounts-keycloak@0.0.1', ['client'])
-    api.imply('mxab:accounts-keycloak@0.0.1', ['client'])
+    api.use('mxab:keycloak-oauth@0.0.2', ['client'])
+    api.use('mxab:accounts-keycloak@0.0.2', ['client'])
+    api.imply('mxab:accounts-keycloak@0.0.2', ['client'])
     api.addFiles('keycloak-loader.js', ['client']);
 });

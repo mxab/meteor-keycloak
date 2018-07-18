@@ -1,6 +1,6 @@
 Package.describe({
     name: 'mxab:accounts-keycloak',
-    version: '0.0.1',
+    version: '0.0.2',
     // Brief, one-line summary of the package.
     summary: 'Provides the Meteor.loginWithMeteorKeycloak call',
     // URL to the Git repository containing the source code for this package.
@@ -17,8 +17,8 @@ Package.onUse(function(api) {
     // Export Accounts (etc) to packages using this one.
     api.imply('accounts-base', ['client', 'server']);
     api.use('accounts-oauth', ['client', 'server']);
-    api.use('mxab:keycloak-oauth@0.0.1');
-    api.imply('mxab:keycloak-oauth@0.0.1');
+    api.use('mxab:keycloak-oauth@0.0.2');
+    api.imply('mxab:keycloak-oauth@0.0.2');
 
     api.addFiles('accounts-keycloak.js');
 });
